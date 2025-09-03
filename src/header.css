@@ -4,6 +4,13 @@
     box-sizing: border-box;
     font-family: sans-serif;
 }
+body{
+    max-width: 80rem;
+    margin: 0 auto; 
+}
+header {
+    width: 100%;
+}
 header{
     min-height: 100px;
     background-color: black;
