@@ -11,58 +11,52 @@ header{
     gap: 1.6em;
     align-items:center;
     justify-content: space-between;
-    padding: 20px 20px;
+    padding: 1.6em
 }
 
 header h1{
     color: white;
 }
-header ul {
-    list-style: none;    
+#nav-header{
+    display: flex;
 }
 
-header a{
+.nav-links {
+    display: flex;
+    gap: 1.2em;
+    list-style: none;
+}
+
+
+.nav-links a {
     text-decoration: none;
     color: white;
 }
 
-.nav-desktop {
-    display: flex;
-    gap: 1.2em;
-}
-
-
-/*Menu y Nav mobile*/
 .menu-btn {
     display: none;
-}
-.nav-mobile{
-    display: none;
-}
-/*Fin Menu mobile*/
-
-.nav-mobile.open {
-    display: flex;
-    flex-direction: column;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.8em;
+    cursor: pointer;
 }
 
 @media (max-width:720px) {
-
-    .nav-mobile{
-        
-        flex-direction: column;
-        gap: 10px;
-    }
-    .nav-desktop{
-        display: none;
-    }
     .menu-btn {
-        display: block; 
-        background: none;
-        border: none;
-        color: white;
-        font-size: 1.5em;
-        cursor: pointer;
+        display: block;
     }
-
+    #nav-header{
+        flex-direction: column;
+    }
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 1.4em;
+        background-color: black;
+        padding: 1.2em;   
+    }
+    .nav-links.open {
+        display: flex;
+    }
 }
