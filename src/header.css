@@ -1,15 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: 'DM Sans', sans-serif;
 }
 body{
     max-width: 80rem;
     margin: 0 auto; 
 }
+/*Recordar que estoy usando rem para font size 
+y depende del weight*/
 header {
     width: 100%;
+    font-weight: 700;
+    font-size: 1.2rem ;
 }
 header{
     min-height: 100px;

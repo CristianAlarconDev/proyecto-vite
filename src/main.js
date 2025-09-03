@@ -1,5 +1,6 @@
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import './header.css';
+import './main.css';
 
 const menuBtn = document.querySelector(".menu-btn");
 const navLinks = document.querySelector(".nav-links");
