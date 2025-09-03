@@ -56,7 +56,15 @@ header h1{
         background-color: black;
         padding: 1.2em;   
     }
+    .nav-links li {
+        text-align: center;
+    }
     .nav-links.open {
         display: flex;
+
+    }
+    header {
+        flex-direction: column;
+        align-items: center; 
     }
 }
