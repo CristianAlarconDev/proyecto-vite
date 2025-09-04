@@ -1,22 +1,15 @@
-
-@media (max-width: 720px) {
-    .slide {
-        max-height: 300px; 
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-
-    .slide h2 {
-        font-size: 1.2rem;
-        
-    }
-
-    .slide p {
-        font-size: 1rem;
-    
-    }
-
-    .slide img {
-        object-fit: center; 
-    }
+#hero-banner{
+    display: flex;
+    align-items: center;
+    padding: 0 1.4em;
+    gap: 1.4em;
+    border-radius: 4px;
 }
+
+#hero img{
+    width: 100%;
+    height: auto;
+    border-radius: 0.3em;
+
+}
+
