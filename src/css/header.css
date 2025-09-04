@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-
+/*tener en cuenta que import se usa si no hay restricciones de ningun tipo en el css como en bancos*/
 *{
     margin: 0;
     padding: 0;
@@ -38,6 +38,7 @@ header h1{
     display: flex;
     gap: 1.2em;
     list-style: none;
+    
 }
 
 
@@ -68,6 +69,7 @@ header h1{
         gap: 1.4em;
         background-color: black;
         padding: 1.2em;   
+        transition: all 0.3s ease; 
     }
     .nav-links li {
         text-align: center;
