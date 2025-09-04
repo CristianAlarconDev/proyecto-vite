@@ -1,0 +1,22 @@
+
+@media (max-width: 720px) {
+    .slide {
+        max-height: 300px; 
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .slide h2 {
+        font-size: 1.2rem;
+        
+    }
+
+    .slide p {
+        font-size: 1rem;
+    
+    }
+
+    .slide img {
+        object-fit: center; 
+    }
+}
