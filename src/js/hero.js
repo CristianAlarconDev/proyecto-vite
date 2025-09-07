@@ -55,42 +55,31 @@ class Carroussel {
   constructor(slides) {
     this.slides = slides
     this.indiceActual = 0;
-
-    this.slides.forEach(slide => {
-      slide.querySelector(".btn-siguiente").
-      addEventListener("click",
-        () => this.siguienteSlide()
-      );
-      slide.querySelector(".btn-anterior").
-      addEventListener("click",
-        () => this.anteriorSlide()
-      );
-    });
   }
 
   iniciarCarroussel(){
-    this.mostrarSlide(0);
-  }
-  mostrarSlide(indiceSlide) {
-    this.slides.forEach((slide, indice) => {
-      if (indice === indiceSlide) {
-        this.slides[indice].style.display = "flex";
-        this.indiceActual=indice;
-      } else {
-        this.slides[indice].style.display = "none";
-      }
+    this.slides.forEach((slide, idx) => 
+      {
+      slide.style.display = idx === 0 ? "flex" : "none";
+      const btnSig= slide.querySelector(".btn-siguiente");
+      btnSig.addEventListener("click", () => this.siguienteSlide());
+      const btnAnt=slide.querySelector(".btn-anterior");
+      btnAnt.addEventListener("click", () => this.anteriorSlide());
     });
-   // console.log(this.slides[indiceSlide].outerHTML);
+  }
+  mostrarSlide(indiceNuevo) {
+    if (indiceNuevo === this.indiceActual) return;
+    this.slides[this.indiceActual].style.display = "none";
+    this.slides[indiceNuevo].style.display = "flex";
+    this.indiceActual = indiceNuevo;
   }
   siguienteSlide() {
-    this.indiceActual = (this.indiceActual + 1)%
-    this.slides.length;
-    this.mostrarSlide(this.indiceActual);
+    const nuevo = (this.indiceActual + 1) % this.slides.length;
+    this.mostrarSlide(nuevo);
   }
   anteriorSlide() {
-    this.indiceActual = (this.indiceActual - 1 + this.slides.length) % 
-    this.slides.length;
-    this.mostrarSlide(this.indiceActual);
+    const nuevo = (this.indiceActual - 1 + this.slides.length) % this.slides.length;
+    this.mostrarSlide(nuevo);
   }
 
 }
