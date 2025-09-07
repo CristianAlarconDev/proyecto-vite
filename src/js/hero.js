@@ -1,9 +1,9 @@
-/* Repasar concepto de promesas y async*/
-async function cargarData() {
-  const respuesta = await fetch("/data/hero.json");
+/* Lee datos de un json y devuelve su contenido en NodeList*/
+async function cargarData(archivoJson) {
+  const respuesta = await fetch(archivoJson);
   return await respuesta.json();
 }
-
+/*Recibe un node y un template html; carga la info en el template y devuelve la plantilla */
 function renderizarSlide(dataJSON, template) {
   const plantilla = template.content.cloneNode(true);
   const seccion = plantilla.querySelector(".slide");
@@ -11,30 +11,25 @@ function renderizarSlide(dataJSON, template) {
   seccion.style.backgroundImage = `url(${dataJSON.img})`;
   seccion.querySelector("h2").textContent = dataJSON.titulo;
   seccion.querySelector("p").textContent = dataJSON.descripcion;
-
   //console.log(seccion.outerHTML);
   return plantilla;
 }
-function renderHero(slidesData) {
-  const contenedorHTML = document.querySelector("#hero");
-  const templateHTML = document.querySelector("#slide-template");
+
+/*Recibe Nodelist y agrega a un contenedor todos los nodos*/
+function renderHero(slidesData, contenedorHTML, templateHTML) {
+
   slidesData.forEach((data) => {
     const slide = renderizarSlide(data, templateHTML);
-
     contenedorHTML.appendChild(slide);
   });
 }
 
-function obtenerSlides() {
-  const slides = document.querySelectorAll("#hero .slide");
-  return slides;
-}
 async function iniciarHero() {
-  const dataHero = await cargarData();
-  renderHero(dataHero);
+  const contenedor = document.querySelector("#hero");
+  const template = document.querySelector("#slide-template");
+  const dataHero = await cargarData("/data/hero.json");
 
-  //const slides=obtenerSlides();
-  //console.log(slides);
+  renderHero(dataHero, contenedor,template);
 }
 /*
 function mostrarSlide(indiceSlide) {
@@ -50,38 +45,64 @@ function mostrarSlide(indiceSlide) {
 }
 */
 
-async function iniciarCarroussel() {
-  //const indice = 1;
-  await iniciarHero();
-  //mostrarSlide(indice);
+function obtenerSlides() {
+  const slides = document.querySelectorAll("#hero .slide");
+  return slides;
 }
-iniciarCarroussel();
 
 class Carroussel {
-  constructor(selector) {
-    this.contenedor = document.querySelector(selector);
-    this.slides = [];
+
+  constructor(slides) {
+    this.slides = slides
     this.indiceActual = 0;
+
+    this.slides.forEach(slide => {
+      slide.querySelector(".btn-siguiente").
+      addEventListener("click",
+        () => this.siguienteSlide()
+      );
+      slide.querySelector(".btn-anterior").
+      addEventListener("click",
+        () => this.anteriorSlide()
+      );
+    });
   }
 
+  iniciarCarroussel(){
+    this.mostrarSlide(0);
+  }
   mostrarSlide(indiceSlide) {
-    slides.forEach((slide, indice) => {
+    this.slides.forEach((slide, indice) => {
       if (indice === indiceSlide) {
-        slides[indice].style.display = "flex";
+        this.slides[indice].style.display = "flex";
+        this.indiceActual=indice;
       } else {
-        slides[indice].style.display = "none";
+        this.slides[indice].style.display = "none";
       }
     });
-    console.log(slides[indiceSlide]);
+   // console.log(this.slides[indiceSlide].outerHTML);
   }
   siguienteSlide() {
-    this.indiceActual = (this.indiceActual + 1) % this.slides.length;
+    this.indiceActual = (this.indiceActual + 1)%
+    this.slides.length;
     this.mostrarSlide(this.indiceActual);
   }
-
   anteriorSlide() {
-    this.indiceActual = (this.indiceActual - 1 + this.slides.length) % this.slides.length;
+    this.indiceActual = (this.indiceActual - 1 + this.slides.length) % 
+    this.slides.length;
     this.mostrarSlide(this.indiceActual);
   }
 
 }
+
+
+async function main() {
+  await iniciarHero();
+  const slides = obtenerSlides();
+  const carroussel= new Carroussel(slides); 
+  carroussel.iniciarCarroussel();
+
+}
+main();
+
+
