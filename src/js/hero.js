@@ -57,7 +57,7 @@ class Carroussel {
     this.indiceActual = 0;
   }
 
-  iniciarCarroussel(){
+  comenzarRecorrido(){
     this.slides.forEach((slide, idx) => 
       {
       slide.style.display = idx === 0 ? "flex" : "none";
@@ -89,7 +89,7 @@ async function main() {
   await iniciarHero();
   const slides = obtenerSlides();
   const carroussel= new Carroussel(slides); 
-  carroussel.iniciarCarroussel();
+  carroussel.comenzarRecorrido();
 
 }
 main();
