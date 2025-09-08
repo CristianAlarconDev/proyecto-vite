@@ -1,0 +1,21 @@
+
+[
+  {
+    "img": "/imgs/hero1.webp",
+    "titulo": "Nueva Colección",
+    "descripcion": "Explorá lo último en tendencia",
+    "link": "/coleccion"
+  },
+  {
+    "img": "/imgs/hero2.webp",
+    "titulo": "Ofertas Especiales",
+    "descripcion": "Hasta 40% OFF en productos seleccionados",
+    "link": "/ofertas"
+  },
+  {
+    "img": "/imgs/hero3.webp",
+    "titulo": "Envíos Gratis",
+    "descripcion": "En compras superiores a $50.000",
+    "link": "/envios"
+  }
+]
