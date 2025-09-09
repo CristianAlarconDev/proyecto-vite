@@ -8,7 +8,8 @@ function renderizarSlide(dataJSON, template) {
   const plantilla = template.content.cloneNode(true);
   const seccion = plantilla.querySelector(".slide");
 
-  seccion.style.backgroundImage = `url(${dataJSON.img})`;
+ // seccion.style.backgroundImage = `url(${dataJSON.img})`;
+  seccion.querySelector("img").src=dataJSON.img;
   seccion.querySelector("h2").textContent = dataJSON.titulo;
   seccion.querySelector("p").textContent = dataJSON.descripcion;
   //console.log(seccion.outerHTML);
