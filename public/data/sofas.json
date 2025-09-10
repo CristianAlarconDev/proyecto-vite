@@ -1,0 +1,23 @@
+[
+    {
+      "titulo": "Sofá 3 cuerpos",
+      "descripcion": "Sofá de lino gris, patas de madera maciza, ideal para living moderno.",
+      "precio": 120000,
+      "imagen": "https://via.placeholder.com/200x150.png?text=Sofa+3+Cuerpos",
+      "recomendado": true
+    },
+    {
+      "titulo": "Sofá esquinero",
+      "descripcion": "Sofá esquinero en L, tapizado en pana azul, capacidad 5 personas.",
+      "precio": 185000,
+      "imagen": "https://via.placeholder.com/200x150.png?text=Sofa+Esquinero",
+      "recomendado": false
+    },
+    {
+      "titulo": "Sillón individual",
+      "descripcion": "Sillón individual con apoyabrazos anchos y diseño moderno.",
+      "precio": 60000,
+      "imagen": "https://via.placeholder.com/200x150.png?text=Sillon",
+      "recomendado": true
+    }
+]

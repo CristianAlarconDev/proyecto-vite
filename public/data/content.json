@@ -1,0 +1,39 @@
+[
+  {
+    "titulo": "Sofá 3 cuerpos",
+    "descripcion": "Sofá de lino gris, patas de madera maciza, ideal para living moderno.",
+    "precio": 120000,
+    "imagen": "https://via.placeholder.com/200x150.png?text=Sofa"
+  },
+  {
+    "titulo": "Mesa de comedor",
+    "descripcion": "Mesa rectangular de madera clara, capacidad para 6 personas.",
+    "precio": 95000,
+    "imagen": "https://via.placeholder.com/200x150.png?text=Mesa"
+  },
+  {
+    "titulo": "Silla ergonómica",
+    "descripcion": "Silla de oficina con respaldo alto y soporte lumbar ajustable.",
+    "precio": 45000,
+    "imagen": "https://via.placeholder.com/200x150.png?text=Silla"
+  },
+  {
+    "titulo": "Estante flotante",
+    "descripcion": "Estante de melamina blanca, práctico y fácil de instalar.",
+    "precio": 15000,
+    "imagen": "https://via.placeholder.com/200x150.png?text=Estante"
+  },
+  {
+    "titulo": "Lámpara de pie",
+    "descripcion": "Lámpara moderna con base metálica negra y pantalla de lino.",
+    "precio": 28000,
+    "imagen": "https://via.placeholder.com/200x150.png?text=Lampara"
+  },
+  {
+    "titulo": "Alfombra boho",
+    "descripcion": "Alfombra de algodón tejida a mano con diseño geométrico.",
+    "precio": 38000,
+    "imagen": "https://via.placeholder.com/200x150.png?text=Alfombra"
+  }
+]
+

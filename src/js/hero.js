@@ -1,5 +1,5 @@
 /* Lee datos de un json y devuelve su contenido en NodeList*/
-async function cargarData(archivoJson) {
+export async function cargarData(archivoJson) {
   const respuesta = await fetch(archivoJson);
   return await respuesta.json();
 }

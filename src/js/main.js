@@ -4,6 +4,7 @@ import '../css/hero.css';
 import '../css/main.css';
 import './header.js';
 import './hero.js';
+import './content.js';
 
 
 /*otra forma de usar una funcion que necesita al dom solo cuando esta cargado, al estar en modulos por vite

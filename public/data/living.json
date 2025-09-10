@@ -1,0 +1,23 @@
+[
+    {
+      "titulo": "Estante",
+      "descripcion": "Estante de melamina blanca, práctico y fácil de instalar.",
+      "precio": 90000,
+      "imagen": "https://via.placeholder.com/200x150.png?text=Estante",
+      "recomendado": true
+    },
+    {
+      "titulo": "Alfombra ",
+      "descripcion": "Alfombra estilo clásico con tonos rojos y beige.",
+      "precio": 120000,
+      "imagen": "https://via.placeholder.com/200x150.png?text=Alfombra",
+      "recomendado": false
+    },
+    {
+      "titulo": "Lámpara de pie",
+      "descripcion": "Lámpara de pie con base metálica y pantalla de lino.",
+      "precio": 48000,
+      "imagen": "https://via.placeholder.com/200x150.png?text=Lampara",
+      "recomendado": true
+    }
+  ]
