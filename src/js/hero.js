@@ -32,19 +32,6 @@ async function iniciarHero() {
 
   renderHero(dataHero, contenedor,template);
 }
-/*
-function mostrarSlide(indiceSlide) {
-  const slides = obtenerSlides();
-  slides.forEach((slide, indice) => {
-    if (indice === indiceSlide) {
-      slides[indice].style.display = "flex";
-    } else {
-      slides[indice].style.display = "none";
-    }
-  });
-  console.log(slides[indiceSlide]);
-}
-*/
 
 function obtenerSlides() {
   const slides = document.querySelectorAll("#hero .slide");
